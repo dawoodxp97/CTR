@@ -1,0 +1,72 @@
+.header {
+  /* background-color: aqua; */
+  width: 92%;
+  height: 10%;
+  margin-left: 8.1%;
+  display: flex;
+}
+.header_left {
+  background-color: #ffffff;
+  flex: 0.3;
+  border-bottom: 4px solid rgb(209, 209, 224, 0.6);
+  border-right: 2px solid rgb(209, 209, 224, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_left > h3 {
+  margin-left: 15px;
+}
+.header_left > .MuiSvgIcon-root {
+  margin-right: 5px;
+  color: #352549;
+  cursor: pointer;
+}
+/* Modal Styles */
+.create_room_grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.create_room {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+}
+.create_room > form {
+  height: 100%;
+  width: 90%;
+  margin-top: 1rem;
+}
+.room_inp {
+  height: 1.5rem;
+  border: none;
+  outline: none;
+  background: #eeeff3;
+  border-radius: 0.5rem;
+}
+.modal_file {
+  height: 1.5rem;
+  outline: none;
+  background: none;
+  width: auto;
+  margin: 0.5rem;
+}
+.modal_submit {
+  margin-left: 1.7rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  height: 1.5rem;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: #352549;
+}
