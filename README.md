@@ -3,7 +3,7 @@
 
 
   <h1> CTR Chat Application</h1>
-CTR Chat Application is a Full Stack Chat Application (MERN) with complete functionality like Real-Time messaging.
+CTR Chat Application is a Full Stack Chat Application with complete functionality like Real-Time messaging.
   <br>
 
   <a href="https://ctr-chat.web.app/"> Live Demo </a>
