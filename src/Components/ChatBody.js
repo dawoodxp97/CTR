@@ -4,7 +4,6 @@ import { useStateValue } from "../StateProvider";
 import { useHistory, useParams } from "react-router";
 //Material UI Imports
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
-import SendIcon from "@material-ui/icons/Send";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
@@ -13,7 +12,8 @@ import timestamp from "time-stamp";
 import Avatar from "react-avatar";
 import db from "../firebase";
 import Modal from "./Modal";
-
+import { EditText } from "react-edit-text";
+import "react-edit-text/dist/index.css";
 function ChatBody() {
   //Context API
   const [{ user }] = useStateValue();
@@ -24,6 +24,7 @@ function ChatBody() {
   const [roomData, setRoomData] = useState({});
   const [isOpen, setIsOpen] = useState(false);
   const [room, setRoom] = useState("");
+  const [edit, setEdit] = useState("");
 
   //Hooks
   const history = useHistory();
@@ -187,27 +188,73 @@ function ChatBody() {
             }`}
           >
             <span className="chat_name">{message?.data?.userName}</span>
-            {message?.data.message}
-            <span className="chat_timestamp"> {message?.data?.timeStamp} </span>
+            {message?.data?.userName === user?.displayName ? (
+              <EditText
+                name="textbox"
+                style={{
+                  width: "auto",
+                  fontSize: "16px",
+                  borderRadius: "0.5rem",
+                  backgroundColor: "#cad0ff",
+                }}
+                onChange={setEdit}
+                onSave={({ value }) => {
+                  db.collection("rooms")
+                    .doc(roomID)
+                    .collection("chat")
+                    .doc(message?.id)
+                    .update({
+                      message: value,
+                    });
+                }}
+                defaultValue={message?.data.message}
+              />
+            ) : (
+              message?.data.message
+            )}
+
+            <span className="chat_timestamp">
+              {" "}
+              {message?.data?.timeStamp}{" "}
+              {message?.data?.userName === user?.displayName ? (
+                <DeleteIcon
+                  onClick={() => {
+                    db.collection("rooms")
+                      .doc(roomID)
+                      .collection("chat")
+                      .doc(message?.id)
+                      .delete()
+                      .then(() => {
+                        //deleted
+                      })
+                      .catch((err) => console.log(err));
+                  }}
+                />
+              ) : (
+                ""
+              )}{" "}
+            </span>
           </p>
         ))}
       </div>
       <div className="chat_footer">
-        <EmojiEmotionsIcon />
-        <form onSubmit={sendMessage}>
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value.trimStart())}
-            placeholder="Type your Message"
-            className="chat_input"
-            type="text"
-            name="name"
-            required
-          />
-          <button type="submit">
-            <SendIcon />
-          </button>
-        </form>
+        <div className="chat_footer_1">
+          <EmojiEmotionsIcon />
+        </div>
+        <div className="chat_footer_2">
+          <form onSubmit={sendMessage}>
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value.trimStart())}
+              placeholder="Type your Message"
+              className="chat_input"
+              type="text"
+              name="name"
+              required
+            />
+            <button type="submit"></button>
+          </form>
+        </div>
       </div>
     </div>
   );
