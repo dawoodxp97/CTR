@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/77268355/128637599-b4cff34e-9139-4458-acad-fe996b962704.png" width="40%" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+  <h1> CTR Chat Application</h1>
+CTR Chat Application is a Full Stack Chat Application with complete functionality like Real-Time messaging.
+  <br>
 
-In the project directory, you can run:
+  <a href="https://ctr-chat.web.app/"> Live Demo </a>
+</div>
 
-### `npm start`
+<br>
+<div align="center">
+<img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /> <img src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103" /> <img src="https://img.shields.io/badge/maintainer-dawoodxp97-blue" /> <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" /> <img src="https://img.shields.io/badge/Made%20With-Love-orange.svg" />
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Tech Stack:
+- Front-End: <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" width="10%" height="20" />
+- Database: <img src="https://img.shields.io/badge/Firestore-FFFF00?style=for-the-badge&logo=firebase&logoColor=black" width="10%" height="20" />
+- Hosting:  <img src="https://img.shields.io/badge/Firebase-Hosting-F1C40F?style=for-the-badge&logo=firebase&logoColor=white" width="20%" height="20" />
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+# Features:
+- Real-Time Chatting. <img src="https://cdn.iconscout.com/icon/free/png-64/chat-2631124-2177136.png" width="25"/>
+- Able to Create Chat Rooms.
+- All CRUD Operations implemented.
+- User Authentication <img src="https://img.shields.io/badge/firebase-FFFF00?&style=for-the-badge&logo=firebase&logoColor=black" width="10%" height="20"/> (SignIn, SignUp with Email & Password and  Google Auth).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Upcoming Features:
+- One-to-One Chatting.
+- Search People.
+- Responsive UI.
 
-### `npm run eject`
+<br>
+<div align="center">
+  <h2> Login </h2>
+  <img src="https://user-images.githubusercontent.com/77268355/128638666-abf681db-dec1-4bef-967e-b663a233676c.png" />
+<br>
+  <h2> SignUp </h2>
+  <img src="https://user-images.githubusercontent.com/77268355/128638680-5b7acdad-1e85-494c-bbe9-1c1d28164b95.png" />
+<br>
+  <h2> Homepage </h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  <img src="https://user-images.githubusercontent.com/77268355/128638702-c5f1461c-296a-4f27-9be6-7fc4fad01dd0.png" />
+<br>
+  <h5>The Design was inspired from Dribble.com</h5>
+  <h4>Made with ❤️ by Shaik Dawood</h4>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</div>
