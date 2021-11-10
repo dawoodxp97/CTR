@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useStateValue } from "../StateProvider";
 import "./Styles/Profile.css";
 import Avatar from "react-avatar";
@@ -39,6 +39,23 @@ function Profile() {
   return (
     <div className="profile">
       <div className="profile_details_grp">
+        <div>
+          {" "}
+          <h1
+            style={{
+              marginLeft: "4rem",
+              color: "#352549",
+              letterSpacing: "1px",
+            }}
+          >
+            Your Profile Details:
+          </h1>
+          <img
+            style={{ height: "70vh" }}
+            src="https://cdni.iconscout.com/illustration/premium/thumb/man-setting-up-public-profile-4468723-3728636.png"
+            alt=""
+          />
+        </div>
         <div className="child_grp">
           <div className="profile_details_grp_child1">
             {!user?.photoURL ? (
@@ -56,6 +73,7 @@ function Profile() {
             <p>Your Username : {user?.displayName}</p>
             <p>Your Email : {user?.email}</p>
             <div>
+              <p>Update Profile Picture:</p>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();

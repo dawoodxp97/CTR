@@ -15,12 +15,12 @@
   border: 2px solid rgb(161, 40, 231);
   filter: drop-shadow(2px 2px 2px rgb(0 0 0/0.4));
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .child_grp {
   height: 50%;
-  width: 50%;
+  width: 30%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,11 @@
 }
 .profile_details_grp_child2 {
   flex: 0.6;
+}
+.profile_details_grp_child2 > div {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #9767d5;
 }
 .upload_btn {
   height: 2rem;

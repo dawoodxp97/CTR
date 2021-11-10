@@ -3,7 +3,6 @@ import "./Styles/Sidebar.css";
 import Avatar from "react-avatar";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import PersonIcon from "@material-ui/icons/Person";
-import SettingsApplicationsIcon from "@material-ui/icons/SettingsApplications";
 import { Tooltip, Badge } from "@material-ui/core";
 import { auth } from "../firebase";
 import { useHistory } from "react-router";
@@ -54,11 +53,6 @@ function Sidebar() {
       <Tooltip title="Profile" arrow>
         <div onClick={profilePush} className="icons">
           <PersonIcon />
-        </div>
-      </Tooltip>
-      <Tooltip title="Settings" arrow>
-        <div className="icons">
-          <SettingsApplicationsIcon />
         </div>
       </Tooltip>
       <div>

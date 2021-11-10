@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useStateValue } from "../StateProvider";
 import { useHistory, useParams } from "react-router";
 //Material UI Imports
-import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
-import AttachFileIcon from "@material-ui/icons/AttachFile";
 //Miscellaneous Imports
 import timestamp from "time-stamp";
 import Avatar from "react-avatar";
@@ -168,7 +166,6 @@ function ChatBody() {
           </div>
           <div className="header_user_item2">
             <DeleteIcon onClick={deleteRoom} />
-            <AttachFileIcon />
             <EditIcon
               onClick={() => {
                 setRoom(roomData?.data.roomName);
@@ -238,9 +235,6 @@ function ChatBody() {
         ))}
       </div>
       <div className="chat_footer">
-        <div className="chat_footer_1">
-          <EmojiEmotionsIcon />
-        </div>
         <div className="chat_footer_2">
           <form onSubmit={sendMessage}>
             <input

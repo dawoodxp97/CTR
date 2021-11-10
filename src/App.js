@@ -1,16 +1,20 @@
 // General & Hooks Imports
-import React, { useEffect } from "react";
+
+import React, { useEffect, lazy, Suspense } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import { ClipLoader } from "react-spinners";
+
 //Components Imports
-import Chats from "./Components/Chats";
-import Header from "./Components/Header";
-import Login from "./Components/Login";
-import Sidebar from "./Components/Sidebar";
-import Signup from "./Components/Signup";
-import Profile from "./Components/Profile";
+
+const Chats = lazy(() => import("./Components/Chats"));
+const Header = lazy(() => import("./Components/Header"));
+const Login = lazy(() => import("./Components/Login"));
+const Sidebar = lazy(() => import("./Components/Sidebar"));
+const Signup = lazy(() => import("./Components/Signup"));
+const Profile = lazy(() => import("./Components/Profile"));
 
 function App() {
   //Context API
@@ -37,28 +41,36 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route path="/profile">
-            <Sidebar />
-            <Profile />
-          </Route>
-          <Route path="/homepage/rooms/:roomID">
-            <Header />
-            <Sidebar />
-            <Chats />
-          </Route>
-          <Route path="/homepage">
-            <Header />
-            <Sidebar />
-            <Chats />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/">
-            <Login />
-          </Route>
-        </Switch>
+        <Suspense
+          fallback={
+            <div className="load">
+              <ClipLoader color="white" loading={true} size={120} />
+            </div>
+          }
+        >
+          <Switch>
+            <Route path="/profile">
+              <Sidebar />
+              <Profile />
+            </Route>
+            <Route path="/homepage/rooms/:roomID">
+              <Header />
+              <Sidebar />
+              <Chats />
+            </Route>
+            <Route path="/homepage">
+              <Header />
+              <Sidebar />
+              <Chats />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/">
+              <Login />
+            </Route>
+          </Switch>
+        </Suspense>
       </Router>
     </div>
   );

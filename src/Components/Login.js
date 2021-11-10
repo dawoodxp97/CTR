@@ -125,6 +125,15 @@ function Login() {
                 Sign-Up{" "}
               </Link>{" "}
             </p>
+            <h5
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                setEmail("tester@test.in");
+                setPassword("tester@12345");
+              }}
+            >
+              Test Login
+            </h5>
           </form>
         </div>
         <Tooltip title="Login with Google" arrow>
