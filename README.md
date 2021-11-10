@@ -3,7 +3,7 @@
 
 
   <h1> CTR Chat Application</h1>
-CTR Chat Application is a Full Stack Chat Application with complete functionality like Real-Time messaging.
+CTR Chat Application is a Chat Application with complete functionality like Real-Time messaging.
   <br>
 
   <a href="https://ctr-chat.web.app/"> Live Demo </a>
@@ -28,6 +28,7 @@ CTR Chat Application is a Full Stack Chat Application with complete functionalit
 - Real-Time Chatting. <img src="https://cdn.iconscout.com/icon/free/png-64/chat-2631124-2177136.png" width="25"/>
 - Able to Create Chat Rooms.
 - All CRUD Operations implemented.
+- Able to edit and delete chat(Only self chat, can't edit/delete other's chat).
 - User Authentication <img src="https://img.shields.io/badge/firebase-FFFF00?&style=for-the-badge&logo=firebase&logoColor=black" width="10%" height="20"/> (SignIn, SignUp with Email & Password and  Google Auth).
 
 
