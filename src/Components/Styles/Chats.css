@@ -1,5 +1,4 @@
 .chats_group {
-  /* background-color: chocolate; */
   margin-left: 8.1%;
   width: 92%;
   height: 91%;
@@ -7,7 +6,7 @@
 }
 .chat_body_grp {
   height: 100vh;
-  margin-top: -3.8rem;
+  margin-top: -4.1rem;
   display: flex;
   flex-direction: column;
 }

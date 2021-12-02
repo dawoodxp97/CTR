@@ -130,9 +130,24 @@ function Login() {
               onClick={() => {
                 setEmail("tester@test.in");
                 setPassword("tester@12345");
+                setLoading(true);
+                auth
+                  .signInWithEmailAndPassword("tester@test.in", "tester@12345")
+                  .then((userCredential) => {
+                    //Signed In
+                    History.push("/homepage");
+                    setLoading(false);
+                    successNotify("Signed In Successfully");
+                  })
+                  .catch((error) => {
+                    setPassword("");
+                    console.log(error.code);
+                    setLoading(false);
+                    warnNotify(error.message);
+                  });
               }}
             >
-              Test Login
+              Guest Login
             </h5>
           </form>
         </div>
