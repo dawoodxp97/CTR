@@ -65,7 +65,7 @@ function ChatBody() {
           db.collection("rooms")
             .doc(roomID)
             .collection("chat")
-            .orderBy("timeStamp", "asc")
+            .orderBy("ts", "asc")
             .onSnapshot((querySnapshot) => {
               setData(
                 querySnapshot.docs.map((doc) => ({
@@ -84,6 +84,10 @@ function ChatBody() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomID]);
 
+  useEffect(() => {
+    scrollBottom();
+  }, [data]);
+
   //Function to send Chat message
   const sendMessage = (e) => {
     e.preventDefault();
@@ -93,7 +97,8 @@ function ChatBody() {
       .add({
         message: input,
         userName: user?.displayName,
-        timeStamp: timestamp("YYYY/MM/DD- HH:mm"),
+        timeStamp: timestamp("HH:mm - YYYY/MM/DD"),
+        ts: timestamp("YYYYMMDDHHmmssms"),
       })
       .then((docRef) => {
         //Message Created
@@ -127,6 +132,14 @@ function ChatBody() {
       .catch((error) => {
         console.error("Error removing document: ", error);
       });
+  };
+
+  //Function to Scroll Bottom
+  const scrollBottom = () => {
+    setTimeout(() => {
+      var chatsBody = document.getElementById("chat_b");
+      chatsBody.scrollTop = chatsBody.scrollHeight;
+    }, 0);
   };
 
   return (
